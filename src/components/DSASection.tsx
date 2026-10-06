@@ -118,7 +118,7 @@ int maxProfitKnapsack(int W, const vector<int>& wt, const vector<int>& val) {
                   </div>
                 </div>
                 <span className="px-2.5 py-1 text-xs font-mono font-bold rounded-lg bg-amber-50 text-amber-900 border border-amber-200">
-                  218+ Solved
+                  400+ Solved
                 </span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">

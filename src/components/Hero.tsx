@@ -36,7 +36,7 @@ export default function Hero() {
       name: PERSONAL_INFO.name,
       education: "B.Tech CSE @ VIT (8.16 CGPA)",
       targetRoles: ["Full-Stack SDE", "Backend Engineer", "AI Systems Developer"],
-      dsaProblemsSolved: "400+ (LeetCode 218+, Codeforces)",
+      dsaProblemsSolved: "400+ (LeetCode 400+, Codeforces)",
       keyWins: {
         concurrency: "Race-safe slot holds (PostgreSQL transactions)",
         ramOptimization: "53% slashed via local ONNX inference",
@@ -92,13 +92,13 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
               </span>
-              <span>Available for 2027 Full-Time SDE &amp; Intern Opportunities</span>
+              <span>Available for Full-Time SDE &amp; Intern Opportunities</span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-2">
               <p className="text-xs font-mono font-bold uppercase tracking-widest text-slate-500">
-                Placement Candidate Portfolio
+                Software Development Engineer • Distributed Systems &amp; Applied AI
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.08] font-display">
                 {PERSONAL_INFO.name}
@@ -202,7 +202,7 @@ export default function Hero() {
                 className="hover:text-slate-900 transition-colors flex items-center gap-1.5 text-xs font-semibold"
               >
                 <Code2 className="w-4 h-4 text-amber-600" />
-                <span>LeetCode (218+)</span>
+                <span>LeetCode (400+)</span>
               </a>
             </div>
 
@@ -278,7 +278,7 @@ export default function Hero() {
                         ],
                       </p>
                       <p>
-                        <span className="text-purple-400">dsaSolved:</span> <span className="text-amber-400">400</span>, <span className="text-zinc-500">// LeetCode 218+ &amp; Codeforces</span>
+                        <span className="text-purple-400">dsaSolved:</span> <span className="text-amber-400">400</span>, <span className="text-zinc-500">// LeetCode 400+ &amp; Codeforces</span>
                       </p>
                       <p>
                         <span className="text-purple-400">keyEngineeringWins:</span> &#123;

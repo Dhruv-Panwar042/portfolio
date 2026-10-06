@@ -52,7 +52,7 @@ export interface SkillCategory {
 export const PERSONAL_INFO = {
   name: "Dhruv Panwar",
   role: "Full-Stack Engineer & AI Systems Developer",
-  status: "Available for 2027 Full-Time SDE & Engineering Roles",
+  status: "Available for Full-Time SDE & Engineering Roles",
   email: "dhruvspanwar12@gmail.com",
   phone: "+91 79903 03391",
   location: "Vellore / Ahmedabad, India",
@@ -69,7 +69,7 @@ export const PERSONAL_INFO = {
 };
 
 export const QUICK_STATS = [
-  { label: "DSA Problems Solved", value: "400+", subtext: "LeetCode (218+) & Codeforces" },
+  { label: "DSA Problems Solved", value: "400+", subtext: "LeetCode & Codeforces" },
   { label: "Deployed Systems", value: "3+", subtext: "Live on Vercel & Render" },
   { label: "Memory Optimization", value: "53%", subtext: "RAM slashed in vector search" },
   { label: "Payload Reduction", value: "97%", subtext: "Client-side canvas compression" },
@@ -397,7 +397,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const DSA_HIGHLIGHTS = {
   totalSolved: "400+",
   platforms: [
-    { name: "LeetCode", solved: "218+", profileUrl: "https://leetcode.com/u/DhruvPanwar", focus: "Graphs, DP, Trees, Two Pointers" },
+    { name: "LeetCode", solved: "400+", profileUrl: "https://leetcode.com/u/DhruvPanwar", focus: "Graphs, DP, Trees, Two Pointers" },
     { name: "Codeforces", solved: "87+", profileUrl: "https://codeforces.com/profile/dhruvspanwar12", focus: "Contest Problem Solving & Speed" },
     { name: "CodeChef", solved: "Active", profileUrl: "https://leetcode.com/u/DhruvPanwar", focus: "Algorithmic Challenges" }
   ],
