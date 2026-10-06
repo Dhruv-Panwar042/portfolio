@@ -6,35 +6,33 @@ import {
   Code, 
   Server, 
   Cpu, 
-  Terminal, 
-  Sparkles,
-  Layers,
-  Wrench
+  Wrench, 
+  Sparkles 
 } from "lucide-react";
 
 export default function SkillsSection() {
   const getCategoryIcon = (category: string) => {
-    if (category.includes("Languages")) return <Code className="w-4 h-4 text-cyan-400" />;
-    if (category.includes("Backend")) return <Server className="w-4 h-4 text-emerald-400" />;
-    if (category.includes("AI")) return <Cpu className="w-4 h-4 text-purple-400" />;
-    return <Wrench className="w-4 h-4 text-blue-400" />;
+    if (category.includes("Languages")) return <Code className="w-4 h-4 text-sky-600" />;
+    if (category.includes("Backend")) return <Server className="w-4 h-4 text-emerald-600" />;
+    if (category.includes("AI")) return <Cpu className="w-4 h-4 text-purple-600" />;
+    return <Wrench className="w-4 h-4 text-blue-600" />;
   };
 
   return (
-    <section id="skills" className="py-20 bg-[#090e1c]/40 border-t border-slate-800/80">
+    <section id="skills" className="py-20 bg-white/70 border-t border-slate-200/90">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-mono uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-50 border border-purple-200 text-purple-800 text-xs font-mono font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Technical Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
             Skills &amp; Technology Stack
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
-            A balanced toolkit combining high-performance systems engineering with modern full-stack 
+          <p className="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl font-sans">
+            A balanced engineering toolkit combining low-level systems efficiency with modern full-stack 
             and applied AI technologies.
           </p>
         </div>
@@ -44,34 +42,34 @@ export default function SkillsSection() {
           {SKILL_CATEGORIES.map((catGroup, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-[#0c1224] border border-slate-800 hover:border-slate-700 transition-all shadow-lg flex flex-col justify-between"
+              className="p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-slate-300 transition-all shadow-sm flex flex-col justify-between hover:-translate-y-1"
             >
               <div>
-                <div className="flex items-center gap-2.5 pb-4 border-b border-slate-800/80 mb-4">
-                  <div className="p-2 rounded-lg bg-slate-800/80 border border-slate-700/60">
+                <div className="flex items-center gap-2.5 pb-4 border-b border-slate-100 mb-4">
+                  <div className="p-2 rounded-xl bg-slate-50 border border-slate-200/80">
                     {getCategoryIcon(catGroup.category)}
                   </div>
-                  <h3 className="text-sm font-bold text-white tracking-tight">
+                  <h3 className="text-sm font-bold text-slate-900 tracking-tight font-display">
                     {catGroup.category}
                   </h3>
                 </div>
 
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   {catGroup.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
-                      className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80 flex items-center justify-between"
+                      className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-between"
                     >
-                      <span className="text-xs font-medium text-slate-200">
+                      <span className="text-xs font-semibold text-slate-800">
                         {skill.name}
                       </span>
                       <span
-                        className={`text-[10px] font-mono font-medium px-2 py-0.5 rounded ${
+                        className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-md ${
                           skill.level === "Advanced"
-                            ? "bg-cyan-500/15 text-cyan-300 border border-cyan-500/30"
+                            ? "bg-sky-100 text-sky-800 border border-sky-200"
                             : skill.level === "Proficient"
-                            ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/30"
-                            : "bg-slate-800 text-slate-400 border border-slate-700"
+                            ? "bg-emerald-100 text-emerald-800 border border-emerald-200"
+                            : "bg-slate-200 text-slate-700"
                         }`}
                       >
                         {skill.level}
@@ -81,7 +79,7 @@ export default function SkillsSection() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-800/60 mt-4 text-[11px] font-mono text-slate-400">
+              <div className="pt-4 border-t border-slate-100 mt-4 text-[11px] font-mono text-slate-400 font-semibold">
                 <span>Production Tested</span>
               </div>
             </div>

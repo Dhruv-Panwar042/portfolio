@@ -61,7 +61,7 @@ export const PERSONAL_INFO = {
   cgpa: "8.16 / 10",
   graduationYear: "2027",
   github: "https://github.com/Dhruv-Panwar042",
-  linkedin: "https://linkedin.com/in/dhruv-panwar",
+  linkedin: "https://www.linkedin.com/in/dhruv-panwar-159b08289/",
   leetcode: "https://leetcode.com/u/DhruvPanwar",
   codeforces: "https://codeforces.com/profile/dhruvspanwar12",
   resumeUrl: "/Dhruv_Panwar_Resume.pdf",
@@ -316,11 +316,27 @@ export const EDUCATION_DATA: Education[] = [
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: "Deep Learning - IIT Ropar",
+    issuer: "NPTEL (Ministry of Education, Govt. of India)",
+    date: "Issued May 2025",
+    credentialId: "NPTEL25CS21S940400141",
+    badgeText: "IIT Ropar • NPTEL",
+    description: "Rigorous coursework and examination covering neural network architectures, backpropagation, CNNs, RNNs, optimization mechanics, and practical deep learning paradigms."
+  },
+  {
+    title: "Industrial IoT Markets and Security",
+    issuer: "United Latino Students Association",
+    date: "Issued Dec 2024",
+    credentialId: "4ZHCYA3H0R0T",
+    badgeText: "IoT & Security",
+    description: "Specialized certification evaluating Industrial IoT architectures, connected embedded security, protocols, and market vulnerabilities."
+  },
+  {
     title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
     issuer: "Oracle",
     date: "October 2025",
     badgeText: "OCI Generative AI",
-    description: "Demonstrated enterprise proficiency in Large Language Models (LLMs), prompt engineering, fine-tuning, RAG architectures, and OCI Generative AI service deployment."
+    description: "Enterprise proficiency in Large Language Models (LLMs), prompt engineering, fine-tuning, RAG architectures, and OCI Generative AI service deployment."
   },
   {
     title: "NPTEL — Marketing Management II",

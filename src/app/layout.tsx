@@ -44,6 +44,8 @@ export const metadata: Metadata = {
   }
 };
 
+import QuirkyCursor from "@/components/QuirkyCursor";
+
 export default function RootLayout({
   children,
 }: {
@@ -52,9 +54,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth light`}
     >
-      <body className="min-h-screen bg-[#070a13] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+      <body className="min-h-screen bg-[#f8fafc] text-slate-900 antialiased selection:bg-sky-500/20 selection:text-sky-900 relative">
+        <QuirkyCursor />
         {children}
       </body>
     </html>
