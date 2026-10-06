@@ -18,6 +18,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dhruvpanwar.vercel.app"),
+  alternates: {
+    canonical: "https://dhruvpanwar.vercel.app",
+  },
   title: "Dhruv Panwar | Full-Stack Engineer & AI Systems Developer",
   description:
     "Portfolio of Dhruv Panwar — Final Year B.Tech CSE at Vellore Institute of Technology (VIT). Production full-stack systems, RAG microservices, low-latency computer vision, and competitive programming (400+ problems).",
@@ -39,8 +43,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dhruv Panwar | Full-Stack Engineer & AI Systems Developer",
     description: "Production full-stack platforms, low-latency AI microservices, and high-concurrency architectures.",
+    url: "https://dhruvpanwar.vercel.app",
+    siteName: "Dhruv Panwar Portfolio",
     type: "website",
     locale: "en_US"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dhruv Panwar | Full-Stack Engineer & AI Systems Developer",
+    description: "Production full-stack platforms, low-latency AI microservices, and high-concurrency architectures."
   }
 };
 
