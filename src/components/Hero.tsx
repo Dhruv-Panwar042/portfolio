@@ -14,8 +14,7 @@ import {
   ShieldCheck,
   Zap,
   Play,
-  RotateCcw,
-  Sparkles
+  RotateCcw
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 
@@ -74,17 +73,13 @@ export default function Hero() {
 
     setTimeout(() => {
       setTestOutput(prev => [...prev, "✓ [PASS] Algorithmic Core: 400+ DSA solutions verified across LeetCode & Codeforces"]);
-      setTestOutput(prev => [...prev, "🎉 ALL TESTS PASSED. Candidate is interview-ready!"]);
+      setTestOutput(prev => [...prev, "✓ [ALL GREEN] Systems verified. Candidate is interview-ready!"]);
       setRunningTest(false);
     }, 1750);
   };
 
   return (
     <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-      {/* Background radial gradient glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-sky-400/10 via-blue-400/10 to-indigo-400/5 blur-[130px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute top-12 right-12 w-80 h-80 bg-emerald-400/10 blur-[110px] rounded-full pointer-events-none -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -92,24 +87,24 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6">
             
             {/* Live Availability Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/90 text-emerald-800 text-xs font-semibold shadow-xs">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
               </span>
               <span>Available for 2027 Full-Time SDE &amp; Intern Opportunities</span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-2">
-              <p className="text-xs font-mono font-bold uppercase tracking-widest text-sky-600">
+              <p className="text-xs font-mono font-bold uppercase tracking-widest text-slate-500">
                 Placement Candidate Portfolio
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.08] font-display">
                 {PERSONAL_INFO.name}
               </h1>
               <h2 className="text-xl sm:text-2xl font-bold text-slate-700 mt-2 font-display">
-                Full-Stack Engineer &amp; <span className="text-gradient-primary">AI Systems Developer</span>
+                Full-Stack Engineer &amp; <span className="text-slate-900">AI Systems Developer</span>
               </h2>
             </div>
 
@@ -123,25 +118,25 @@ export default function Hero() {
 
             {/* Key Skill Highlights Pills */}
             <div className="flex flex-wrap gap-2 pt-1">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-lg bg-white border border-slate-200 text-slate-800 shadow-xs hover:border-amber-400 transition-all">
-                <Zap className="w-3.5 h-3.5 text-amber-500" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-lg bg-white border border-slate-200 text-slate-800 shadow-xs hover:border-slate-400 transition-colors">
+                <Zap className="w-3.5 h-3.5 text-amber-600" />
                 400+ DSA Solved (LeetCode &amp; CF)
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-lg bg-white border border-slate-200 text-slate-800 shadow-xs hover:border-sky-400 transition-all">
-                <Cpu className="w-3.5 h-3.5 text-sky-500" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-lg bg-white border border-slate-200 text-slate-800 shadow-xs hover:border-slate-400 transition-colors">
+                <Cpu className="w-3.5 h-3.5 text-slate-700" />
                 Sub-300ms Low-Latency Inference
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-lg bg-white border border-slate-200 text-slate-800 shadow-xs hover:border-emerald-400 transition-all">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-lg bg-white border border-slate-200 text-slate-800 shadow-xs hover:border-slate-400 transition-colors">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
                 8.16 CGPA • VIT Vellore
               </span>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-3">
+            <div className="flex flex-wrap items-center gap-3 pt-3">
               <a
                 href="#projects"
-                className="btn-quirky inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-semibold text-sm shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/35 transition-all"
+                className="btn-interaction inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-sm hover:shadow transition-all"
               >
                 <span>View Featured Projects</span>
                 <ArrowRight className="w-4 h-4" />
@@ -151,22 +146,22 @@ export default function Hero() {
                 href={PERSONAL_INFO.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-quirky inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-semibold text-sm shadow-xs transition-all hover:border-slate-300"
+                className="btn-interaction inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-semibold text-sm shadow-xs transition-all hover:border-slate-300"
               >
-                <FileText className="w-4 h-4 text-sky-600" />
+                <FileText className="w-4 h-4 text-slate-700" />
                 <span>Resume (PDF)</span>
                 <ExternalLink className="w-3.5 h-3.5 opacity-60" />
               </a>
 
               <button
                 onClick={copyEmailToClipboard}
-                className="btn-quirky inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900 text-sm shadow-xs transition-colors"
+                className="btn-interaction inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 hover:text-slate-900 text-sm shadow-xs transition-colors"
                 title="Copy email to clipboard"
               >
                 {copiedEmail ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-600" />
-                    <span className="text-emerald-700 text-xs font-bold">Email Copied!</span>
+                    <Check className="w-4 h-4 text-emerald-700" />
+                    <span className="text-emerald-800 text-xs font-bold">Email Copied!</span>
                   </>
                 ) : (
                   <>
@@ -194,9 +189,9 @@ export default function Hero() {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-600 transition-colors flex items-center gap-1.5 text-xs font-semibold"
+                className="hover:text-slate-900 transition-colors flex items-center gap-1.5 text-xs font-semibold"
               >
-                <LinkedinIcon className="w-4 h-4 text-blue-600" />
+                <LinkedinIcon className="w-4 h-4" />
                 <span>LinkedIn</span>
               </a>
               <span className="text-slate-300">•</span>
@@ -204,9 +199,9 @@ export default function Hero() {
                 href={PERSONAL_INFO.leetcode}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-amber-600 transition-colors flex items-center gap-1.5 text-xs font-semibold"
+                className="hover:text-slate-900 transition-colors flex items-center gap-1.5 text-xs font-semibold"
               >
-                <Code2 className="w-4 h-4 text-amber-500" />
+                <Code2 className="w-4 h-4 text-amber-600" />
                 <span>LeetCode (218+)</span>
               </a>
             </div>
@@ -215,10 +210,10 @@ export default function Hero() {
 
           {/* Right Column: Upgraded Interactive Developer Profile Terminal */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-[#0f172a] text-slate-200 border border-slate-800 shadow-2xl shadow-slate-900/15 overflow-hidden font-mono text-xs">
+            <div className="rounded-2xl bg-[#18181b] text-slate-200 border border-zinc-800 shadow-xl overflow-hidden font-mono text-xs">
               
               {/* Terminal Window Header */}
-              <div className="flex items-center justify-between px-4 py-3 bg-[#1e293b]/90 border-b border-slate-700/80">
+              <div className="flex items-center justify-between px-4 py-3 bg-[#27272a]/90 border-b border-zinc-750">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-rose-500/90" />
                   <div className="w-3 h-3 rounded-full bg-amber-500/90" />
@@ -232,7 +227,7 @@ export default function Hero() {
                   <button
                     onClick={() => setActiveTab("code")}
                     className={`px-2 py-0.5 rounded text-[10px] font-mono transition-colors ${
-                      activeTab === "code" ? "bg-slate-700 text-sky-400 font-bold" : "text-slate-400 hover:text-white"
+                      activeTab === "code" ? "bg-zinc-700 text-white font-bold" : "text-zinc-400 hover:text-white"
                     }`}
                   >
                     Code
@@ -243,7 +238,7 @@ export default function Hero() {
                       if (testOutput.length === 0) runDiagnostics();
                     }}
                     className={`px-2 py-0.5 rounded text-[10px] font-mono transition-colors flex items-center gap-1 ${
-                      activeTab === "tests" ? "bg-slate-700 text-emerald-400 font-bold" : "text-slate-400 hover:text-white"
+                      activeTab === "tests" ? "bg-zinc-700 text-emerald-400 font-bold" : "text-zinc-400 hover:text-white"
                     }`}
                   >
                     <span>Tests</span>
@@ -258,7 +253,7 @@ export default function Hero() {
                 {activeTab === "code" ? (
                   <div className="space-y-1 leading-relaxed">
                     <div>
-                      <span className="text-sky-400 font-semibold">const</span> candidate = &#123;
+                      <span className="text-zinc-400 font-semibold">const</span> candidate = &#123;
                     </div>
                     <div className="pl-4 space-y-1 text-slate-300">
                       <p>
@@ -276,22 +271,22 @@ export default function Hero() {
                       </p>
                       <p>
                         <span className="text-purple-400">languages:</span> [
-                        <span className="text-sky-300">&quot;C++ (STL)&quot;</span>, 
-                        <span className="text-sky-300">&quot;Python&quot;</span>, 
-                        <span className="text-sky-300">&quot;TypeScript&quot;</span>, 
-                        <span className="text-sky-300">&quot;SQL&quot;</span>
+                        <span className="text-zinc-200">&quot;C++ (STL)&quot;</span>, 
+                        <span className="text-zinc-200">&quot;Python&quot;</span>, 
+                        <span className="text-zinc-200">&quot;TypeScript&quot;</span>, 
+                        <span className="text-zinc-200">&quot;SQL&quot;</span>
                         ],
                       </p>
                       <p>
-                        <span className="text-purple-400">dsaSolved:</span> <span className="text-blue-400">400</span>, <span className="text-slate-500">// LeetCode 218+ &amp; Codeforces</span>
+                        <span className="text-purple-400">dsaSolved:</span> <span className="text-amber-400">400</span>, <span className="text-zinc-500">// LeetCode 218+ &amp; Codeforces</span>
                       </p>
                       <p>
                         <span className="text-purple-400">keyEngineeringWins:</span> &#123;
                       </p>
-                      <div className="pl-4 space-y-0.5 text-slate-400">
-                        <p><span className="text-slate-300">concurrency:</span> <span className="text-emerald-300">&quot;Race-safe slot holds (Postgres)&quot;</span>,</p>
-                        <p><span className="text-slate-300">ramOptimization:</span> <span className="text-emerald-300">&quot;53% slashed via ONNX inference&quot;</span>,</p>
-                        <p><span className="text-slate-300">latencyReduction:</span> <span className="text-emerald-300">&quot;35s → 1.2s via canvas downscale&quot;</span></p>
+                      <div className="pl-4 space-y-0.5 text-zinc-400">
+                        <p><span className="text-zinc-300">concurrency:</span> <span className="text-emerald-300">&quot;Race-safe slot holds (Postgres)&quot;</span>,</p>
+                        <p><span className="text-zinc-300">ramOptimization:</span> <span className="text-emerald-300">&quot;53% slashed via ONNX inference&quot;</span>,</p>
+                        <p><span className="text-zinc-300">latencyReduction:</span> <span className="text-emerald-300">&quot;35s → 1.2s via canvas downscale&quot;</span></p>
                       </div>
                       <p>&#125;,</p>
                       <p>
@@ -310,24 +305,24 @@ export default function Hero() {
                   </div>
                 ) : (
                   <div className="space-y-2 font-mono text-[11px]">
-                    <div className="flex items-center justify-between pb-2 border-b border-slate-800 text-slate-400">
+                    <div className="flex items-center justify-between pb-2 border-b border-zinc-800 text-zinc-400">
                       <span>TestSuite: vit_sde_readiness_test.py</span>
                       <button
                         onClick={runDiagnostics}
                         disabled={runningTest}
-                        className="flex items-center gap-1 text-sky-400 hover:text-white"
+                        className="flex items-center gap-1 text-zinc-200 hover:text-white"
                       >
                         <RotateCcw className={`w-3 h-3 ${runningTest ? "animate-spin" : ""}`} />
                         <span>Re-run</span>
                       </button>
                     </div>
                     
-                    <div className="space-y-1.5 text-slate-300">
+                    <div className="space-y-1.5 text-zinc-300">
                       {testOutput.map((line, idx) => (
                         <div 
                           key={idx}
                           className={`${
-                            line.includes("PASS") ? "text-emerald-400" : line.includes("🎉") ? "text-amber-300 font-bold" : "text-slate-400"
+                            line.includes("PASS") ? "text-emerald-400" : line.includes("GREEN") ? "text-amber-300 font-bold" : "text-zinc-400"
                           }`}
                         >
                           {line}
@@ -340,19 +335,19 @@ export default function Hero() {
               </div>
 
               {/* Terminal Bottom Controls */}
-              <div className="px-4 py-3 bg-[#1e293b]/70 border-t border-slate-800 flex items-center justify-between text-[11px]">
+              <div className="px-4 py-3 bg-[#27272a]/70 border-t border-zinc-800 flex items-center justify-between text-[11px]">
                 <button
                   onClick={runDiagnostics}
                   disabled={runningTest}
-                  className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/30 font-medium transition-all"
+                  className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 font-medium transition-all"
                 >
-                  <Play className="w-3 h-3 text-sky-400 fill-sky-400" />
+                  <Play className="w-3 h-3 text-zinc-300 fill-zinc-300" />
                   <span>{runningTest ? "Running tests..." : "Run Test Suite"}</span>
                 </button>
 
                 <button
                   onClick={copyJsonToClipboard}
-                  className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+                  className="flex items-center gap-1 px-2.5 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 transition-colors"
                 >
                   {copiedJson ? (
                     <>
@@ -361,7 +356,7 @@ export default function Hero() {
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3 h-3 text-slate-400" />
+                      <Copy className="w-3 h-3 text-zinc-400" />
                       <span>Copy JSON</span>
                     </>
                   )}

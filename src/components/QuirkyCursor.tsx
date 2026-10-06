@@ -55,13 +55,13 @@ export default function QuirkyCursor() {
     const handleMouseDown = (e: MouseEvent) => {
       setIsMouseDown(true);
 
-      // Spawn quirky sparkles on click!
-      const colors = ["#0284c7", "#059669", "#7c3aed", "#d97706", "#f43f5e"];
+      // Spawn quirky sparkles on click (subtle professional palette)
+      const colors = ["#0f172a", "#334155", "#059669", "#d97706", "#64748b"];
       const newSparkles: Sparkle[] = Array.from({ length: 6 }).map((_, i) => ({
         id: Date.now() + i,
-        x: e.clientX + (Math.random() - 0.5) * 40,
-        y: e.clientY + (Math.random() - 0.5) * 40,
-        size: Math.floor(Math.random() * 8) + 6,
+        x: e.clientX + (Math.random() - 0.5) * 36,
+        y: e.clientY + (Math.random() - 0.5) * 36,
+        size: Math.floor(Math.random() * 6) + 4,
         color: colors[Math.floor(Math.random() * colors.length)],
         rotation: Math.random() * 360,
       }));
@@ -69,7 +69,7 @@ export default function QuirkyCursor() {
       setSparkles((prev) => [...prev.slice(-12), ...newSparkles]);
       setTimeout(() => {
         setSparkles((prev) => prev.filter((s) => !newSparkles.some((ns) => ns.id === s.id)));
-      }, 700);
+      }, 650);
     };
 
     const handleMouseUp = () => setIsMouseDown(false);
@@ -112,7 +112,7 @@ export default function QuirkyCursor() {
       <div
         className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(650px circle at ${mousePos.x}px ${mousePos.y}px, rgba(14, 165, 233, 0.07), rgba(99, 102, 241, 0.04) 40%, transparent 80%)`,
+          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(148, 163, 184, 0.08), transparent 75%)`,
         }}
       />
 
@@ -129,7 +129,7 @@ export default function QuirkyCursor() {
             backgroundColor: sparkle.color,
             borderRadius: "50%",
             transform: `translate(-50%, -50%) rotate(${sparkle.rotation}deg)`,
-            transition: "all 0.6s ease-out",
+            transition: "all 0.5s ease-out",
           }}
         />
       ))}
@@ -140,26 +140,25 @@ export default function QuirkyCursor() {
         style={{
           left: `${mousePos.x}px`,
           top: `${mousePos.y}px`,
-          width: isHoveringInteractive ? "10px" : "6px",
-          height: isHoveringInteractive ? "10px" : "6px",
-          backgroundColor: isHoveringInteractive ? "#0284c7" : "#0f172a",
+          width: isHoveringInteractive ? "8px" : "6px",
+          height: isHoveringInteractive ? "8px" : "6px",
+          backgroundColor: "#0f172a",
           transform: `translate(-50%, -50%) scale(${isMouseDown ? 0.6 : 1})`,
-          boxShadow: isHoveringInteractive ? "0 0 10px rgba(2, 132, 199, 0.5)" : "none",
         }}
       />
 
       {/* Lagging Spring Outer Ring / Morphing Aura */}
       <div
-        className="pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-1/2 rounded-full transition-all duration-300 ease-out flex items-center justify-center font-mono text-[9px] font-bold text-sky-600"
+        className="pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-1/2 rounded-full transition-all duration-300 ease-out flex items-center justify-center font-mono text-[9px] font-bold text-slate-800"
         style={{
           left: `${trailPos.x}px`,
           top: `${trailPos.y}px`,
-          width: isHoveringInteractive ? (isMouseDown ? "44px" : "50px") : "28px",
-          height: isHoveringInteractive ? (isMouseDown ? "44px" : "50px") : "28px",
+          width: isHoveringInteractive ? (isMouseDown ? "40px" : "46px") : "26px",
+          height: isHoveringInteractive ? (isMouseDown ? "40px" : "46px") : "26px",
           border: isHoveringInteractive
-            ? "1.5px solid rgba(2, 132, 199, 0.65)"
-            : "1px dashed rgba(100, 116, 139, 0.4)",
-          backgroundColor: isHoveringInteractive ? "rgba(224, 242, 254, 0.35)" : "transparent",
+            ? "1.5px solid rgba(15, 23, 42, 0.6)"
+            : "1px dashed rgba(148, 163, 184, 0.5)",
+          backgroundColor: isHoveringInteractive ? "rgba(241, 245, 249, 0.5)" : "transparent",
           backdropFilter: isHoveringInteractive ? "blur(1px)" : "none",
           transform: `translate(-50%, -50%) rotate(${isHoveringInteractive ? "45deg" : "0deg"})`,
         }}

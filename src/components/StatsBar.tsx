@@ -13,12 +13,12 @@ import {
 export default function StatsBar() {
   const getIcon = (index: number) => {
     switch (index) {
-      case 0: return <Code2 className="w-5 h-5 text-amber-600" />;
-      case 1: return <Rocket className="w-5 h-5 text-sky-600" />;
-      case 2: return <Cpu className="w-5 h-5 text-emerald-600" />;
-      case 3: return <Zap className="w-5 h-5 text-blue-600" />;
-      case 4: return <GraduationCap className="w-5 h-5 text-purple-600" />;
-      default: return <Code2 className="w-5 h-5 text-sky-600" />;
+      case 0: return <Code2 className="w-5 h-5 text-amber-700" />;
+      case 1: return <Rocket className="w-5 h-5 text-slate-800" />;
+      case 2: return <Cpu className="w-5 h-5 text-emerald-700" />;
+      case 3: return <Zap className="w-5 h-5 text-slate-800" />;
+      case 4: return <GraduationCap className="w-5 h-5 text-slate-800" />;
+      default: return <Code2 className="w-5 h-5 text-slate-800" />;
     }
   };
 

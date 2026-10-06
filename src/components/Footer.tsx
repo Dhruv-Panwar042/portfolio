@@ -43,7 +43,7 @@ export default function Footer() {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-xl hover:text-blue-600 hover:bg-blue-50 transition-all hover:scale-110 active:scale-95"
+              className="p-2 rounded-xl hover:text-slate-900 hover:bg-slate-100 transition-all hover:scale-110 active:scale-95"
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="w-4 h-4" />
@@ -52,14 +52,14 @@ export default function Footer() {
               href={PERSONAL_INFO.leetcode}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-xl hover:text-amber-600 hover:bg-amber-50 transition-all hover:scale-110 active:scale-95"
+              className="p-2 rounded-xl hover:text-slate-900 hover:bg-slate-100 transition-all hover:scale-110 active:scale-95"
               aria-label="LeetCode"
             >
               <Code2 className="w-4 h-4" />
             </a>
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="p-2 rounded-xl hover:text-sky-600 hover:bg-sky-50 transition-all hover:scale-110 active:scale-95"
+              className="p-2 rounded-xl hover:text-slate-900 hover:bg-slate-100 transition-all hover:scale-110 active:scale-95"
               aria-label="Email"
             >
               <Mail className="w-4 h-4" />
@@ -68,7 +68,7 @@ export default function Footer() {
               href={PERSONAL_INFO.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-xl hover:text-emerald-700 hover:bg-emerald-50 transition-all hover:scale-110 active:scale-95"
+              className="p-2 rounded-xl hover:text-slate-900 hover:bg-slate-100 transition-all hover:scale-110 active:scale-95"
               aria-label="Resume"
             >
               <FileText className="w-4 h-4" />

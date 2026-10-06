@@ -10,7 +10,6 @@ import {
   Copy, 
   Check, 
   Send, 
-  Code2, 
   ExternalLink 
 } from "lucide-react";
 import { LinkedinIcon, GithubIcon } from "./Icons";
@@ -48,8 +47,8 @@ export default function ContactSection() {
           {/* Left Column: Direct Info & Quick Copy */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-50 border border-sky-200 text-sky-800 text-xs font-mono font-bold uppercase tracking-wider mb-3">
-                <Mail className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-bold uppercase tracking-wider mb-3">
+                <Mail className="w-3.5 h-3.5 text-slate-600" />
                 <span>Get In Touch</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
@@ -65,14 +64,14 @@ export default function ContactSection() {
             <div className="space-y-3 font-mono text-xs">
               
               {/* Email */}
-              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-between">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-sky-50 text-sky-700 border border-sky-100">
+                  <div className="p-2.5 rounded-xl bg-slate-100 text-slate-700 border border-slate-200">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-[10px] text-slate-400 uppercase font-bold">Direct Email</div>
-                    <div className="text-slate-800 font-bold">{PERSONAL_INFO.email}</div>
+                    <div className="text-slate-900 font-bold">{PERSONAL_INFO.email}</div>
                   </div>
                 </div>
                 <button
@@ -85,14 +84,14 @@ export default function ContactSection() {
               </div>
 
               {/* Phone */}
-              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-between">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-100">
+                  <div className="p-2.5 rounded-xl bg-slate-100 text-slate-700 border border-slate-200">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-[10px] text-slate-400 uppercase font-bold">Phone / WhatsApp</div>
-                    <div className="text-slate-800 font-bold">{PERSONAL_INFO.phone}</div>
+                    <div className="text-slate-900 font-bold">{PERSONAL_INFO.phone}</div>
                   </div>
                 </div>
                 <button
@@ -105,13 +104,13 @@ export default function ContactSection() {
               </div>
 
               {/* Location */}
-              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-purple-50 text-purple-700 border border-purple-100">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-slate-100 text-slate-700 border border-slate-200">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-400 uppercase font-bold">Location &amp; Mobility</div>
-                  <div className="text-slate-800 font-bold">VIT Vellore • Open to Relocate Anywhere</div>
+                  <div className="text-slate-900 font-bold">VIT Vellore • Open to Relocate Anywhere</div>
                 </div>
               </div>
 
@@ -123,7 +122,7 @@ export default function ContactSection() {
                 href={PERSONAL_INFO.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-quirky inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-xs shadow-md shadow-sky-500/20 hover:shadow-sky-500/30 transition-all"
+                className="btn-interaction inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-sm transition-all"
               >
                 <FileText className="w-4 h-4" />
                 <span>Download Resume (PDF)</span>
@@ -134,9 +133,9 @@ export default function ContactSection() {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-quirky inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold transition-colors shadow-xs"
+                className="btn-interaction inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold transition-colors shadow-xs"
               >
-                <LinkedinIcon className="w-4 h-4 text-blue-600" />
+                <LinkedinIcon className="w-4 h-4 text-slate-700" />
                 <span>LinkedIn</span>
               </a>
 
@@ -144,9 +143,9 @@ export default function ContactSection() {
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-quirky inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold transition-colors shadow-xs"
+                className="btn-interaction inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold transition-colors shadow-xs"
               >
-                <GithubIcon className="w-4 h-4" />
+                <GithubIcon className="w-4 h-4 text-slate-700" />
                 <span>GitHub</span>
               </a>
             </div>
@@ -154,10 +153,10 @@ export default function ContactSection() {
 
           {/* Right Column: Pre-populated Fast Recruiter Email Sender */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200/90 shadow-sm">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
               <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse" />
                   <h3 className="font-bold text-slate-900 text-base font-display">Direct Recruiter Outreach</h3>
                 </div>
                 <span className="text-xs font-mono text-slate-500 font-semibold">Response &lt; 12 Hours</span>
@@ -184,7 +183,7 @@ export default function ContactSection() {
                     type="text"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-sky-500 font-sans text-sm shadow-xs"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-slate-400 font-sans text-sm shadow-xs"
                     placeholder="Subject line..."
                   />
                 </div>
@@ -197,7 +196,7 @@ export default function ContactSection() {
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-sky-500 font-sans text-sm resize-none leading-relaxed shadow-xs"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-slate-400 font-sans text-sm resize-none leading-relaxed shadow-xs"
                     placeholder="Your message..."
                   />
                 </div>
@@ -209,7 +208,7 @@ export default function ContactSection() {
 
                   <button
                     type="submit"
-                    className="btn-quirky inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold text-xs transition-all shadow-md shadow-sky-500/20"
+                    className="btn-interaction inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-all shadow-sm"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Send Message</span>
