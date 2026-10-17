@@ -85,10 +85,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 font-medium">
-          <div>
-            &copy; {new Date().getFullYear()} {PERSONAL_INFO.name}. Built with Next.js, React 19, TypeScript &amp; Tailwind CSS.
-          </div>
+        <div className="pt-8 flex items-center justify-center text-[11px] text-slate-500 font-medium">
           <div className="flex items-center gap-4">
             <span className="text-emerald-700 font-mono font-bold flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
